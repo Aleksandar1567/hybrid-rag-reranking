@@ -1,0 +1,22 @@
+[
+  {"type": "keyword", "question": "E2103", "relevant": ["sen-02"]},
+  {"type": "keyword", "question": "what does E4013 mean", "relevant": ["net-02"]},
+  {"type": "keyword", "question": "E7001 on my device", "relevant": ["fw-03"]},
+  {"type": "keyword", "question": "poll_interval_ms default", "relevant": ["sen-03"]},
+  {"type": "keyword", "question": "nimctl token rotate", "relevant": ["sec-02"]},
+  {"type": "keyword", "question": "port 8883", "relevant": ["net-05"]},
+
+  {"type": "semantic", "question": "the box got too hot and turned itself off", "relevant": ["ops-01"]},
+  {"type": "semantic", "question": "how long does it survive a blackout", "relevant": ["pwr-01"]},
+  {"type": "semantic", "question": "will I lose my data if the internet goes away for a day", "relevant": ["net-06"]},
+  {"type": "semantic", "question": "a bad update bricked the device, can it recover by itself", "relevant": ["fw-02"]},
+  {"type": "semantic", "question": "my temperature probe always shows two degrees too much", "relevant": ["sen-04"]},
+  {"type": "semantic", "question": "wipe everything and start from scratch", "relevant": ["fw-04"]},
+  {"type": "semantic", "question": "what happens when the cable to the router is unplugged", "relevant": ["net-03"]},
+
+  {"type": "mixed", "question": "E4012 keeps coming back, how do I get a new certificate", "relevant": ["sec-01", "net-01"]},
+  {"type": "mixed", "question": "nimctl command to save battery at night on a solar site", "relevant": ["pwr-03"]},
+  {"type": "mixed", "question": "E2103 errors started after I read sensors faster", "relevant": ["sen-03", "sen-02"]},
+  {"type": "mixed", "question": "how do I reach the device with SSH for half an hour", "relevant": ["ops-04"]},
+  {"type": "mixed", "question": "what does the amber LED mean after a failed boot", "relevant": ["sec-03", "ops-03"]}
+]

@@ -1,0 +1,4 @@
+sentence-transformers>=3.0,<6
+numpy>=1.26
+anthropic>=1.0
+pytest>=8.0
