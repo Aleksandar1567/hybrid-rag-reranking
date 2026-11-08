@@ -65,7 +65,8 @@ What this run shows:
 
 - **Hybrid is not automatically better.** It fixed vector search's misses on exact codes, but BM25's weak results on semantic questions pulled the fused ranking below vector search overall.
 - **Reranking recovered part of that loss** and had the best Hit@1, at about 20 times the latency. It still missed one question in the top 3 that vector search found.
-- **BM25 here has no stop-word removal**, so words like "the" can match on semantic questions. That is a likely cause of its weak results, and the first thing to try next.
+- **Stop-word removal didn't fix BM25.** A follow-up test used an English stop-word list. BM25's Hit@1 fell from 0.61 to 0.56 and hybrid's from 0.72 to 0.61, while hybrid's Hit@3 rose from 0.83 to 0.89. The semantic questions share few words with the right document, so filtering words can't add the missing matches.
+- **A small set understates hybrid search.** On a real site with 1,423 passages, [website-chatbot](https://github.com/Aleksandar1567/website-chatbot#search-quality) found 25 of 33 answers with plain hybrid search, against 20 for BM25 and 22 for embeddings.
 
 Treat these numbers as an illustration, not a benchmark. The corpus is tiny and fictional, the same author wrote the documents and the questions, and one question moves an overall score by about 0.06. The 20 candidates per retriever also cover most of the 24 documents.
 
